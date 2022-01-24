@@ -1,0 +1,1031 @@
+{
+	"info": {
+		"_postman_id": "33b5528f-045b-476c-afe4-f4f2fa0d0e25",
+		"name": "Test Case BarruPython",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Sukses login jika email dan password sesuai",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riskiamalia@gmail.com\",\r\n    \"password\": \"riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Sukses login jika email menggunakan huruf besar kecil",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"RiskiAmalia@gmail.com\",\r\n    \"password\": \"riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Sukses login jika password menggunakan huruf besar kecil",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riskiamalia@gmail.com\",\r\n    \"password\": \"rISkI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed login jika email dan password kosong",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika email kosong",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "failed login jika email kosong ",
+							"host": [
+								"failed login jika email kosong "
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika password kosong",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riskiamalia@gmail.com\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika password huruf besar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riskiamalia@gmail.com\",\r\n    \"password\": \"Riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika email tidak sesuai format",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riskiamalia@@gmail.com\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika email salah password benar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riskiaaamalia@gmail.com\",\r\n    \"password\": \"riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika password salah email benar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riskiamalia@gmail.com\",\r\n    \"password\": \"qaqaaq\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika email di isikan password , password  diisikan email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riski\",\r\n    \"password\": \"riskiamalia@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika email di isi username",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riski\",\r\n    \"password\": \"riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "failed login jika email di isi no hp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"0111011001\",\r\n    \"password\": \"riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "faled login dengan random email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"barrukurniawan@gmail.com\",\r\n    \"password\": \"riski\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Regist",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Success Register jika email name password sudah terisi sesuai",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Succses regis jika email menggunakan huruf kapital",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika email Kosong",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika name Kosong",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika password Kosong",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika  password melebihi max char",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika email melebihi max char",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika email sudah terdaftar",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika email tidak sesuai format",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika name menggunakan int",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Failed regis jika password menggunakan int",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "List User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "List User Succes Filter Email",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user?email=testing",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "testing"
+								},
+								{
+									"key": "username",
+									"value": "tampan",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 Nov 2021 03:04:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "200"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"testing.qa@gmail.com\",\n            \"username\": \"belajar qa\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 5,\n        \"total_data\": 1\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				},
+				{
+					"name": "List User Success Filter Username",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user?email=&username=tampan",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": ""
+								},
+								{
+									"key": "username",
+									"value": "tampan"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 Nov 2021 03:04:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "201"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"sitampan@gmail.com\",\n            \"username\": \"tampan berani\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 5,\n        \"total_data\": 1\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				},
+				{
+					"name": "List User Success Filter & Pagination",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user?email=&username=barru&page=1&limit=2",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": ""
+								},
+								{
+									"key": "username",
+									"value": "barru"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 Nov 2021 03:06:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"barru.kurniawan@gmail.com\",\n            \"username\": \"Barru Kurniawan\"\n        },\n        {\n            \"email\": \"gantengku@sdhgajsdgajhs.id\",\n            \"username\": \"barru ganteng\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 2,\n        \"total_data\": 3\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				},
+				{
+					"name": "List User Success Without Filter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "barru",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "tampan",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 Nov 2021 03:03:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"barru.kurniawan@gmail.com\",\n            \"username\": \"Barru Kurniawan\"\n        },\n        {\n            \"email\": \"sitampan@gmail.com\",\n            \"username\": \"tampan berani\"\n        },\n        {\n            \"email\": \"deinuritasari@gmail.com\",\n            \"username\": \"dwi nurita sari\"\n        },\n        {\n            \"email\": \"dnrinnes@gmail.com\",\n            \"username\": \"innes\"\n        },\n        {\n            \"email\": \"hidayatiyulvi@gmail.com\",\n            \"username\": \"yulvi\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 5,\n        \"total_data\": 61\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bc221ffa9b7668e309c2293979463a42409323a76071941f2451f1a060550634",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "5f199293e2e357d3366972f6fddf80b84ec035d4659f408db9c78eaed2cfb894",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"riska\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://barru.pythonanywhere.com/update-profile",
+					"protocol": "http",
+					"host": [
+						"barru",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"update-profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Profile Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5ef842707382d711e285a599ed4dceced8a62d01cb89c31de6f4ccf54734fbfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"halmaheraho qa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/update-profile",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 14 Nov 2021 13:01:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "120"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Username Anda menjadi halmaheraho qa\",\n    \"message\": \"Berhasil Perbarui Profile\",\n    \"status\": \"SUCCESS_UPDATE_PROFILE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5ef842707382d711e285a599ed4dceced8a62d01cb89c31de6f4ccf54734fbfc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"belajarqa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://barru.pythonanywhere.com/delete-user",
+					"protocol": "http",
+					"host": [
+						"barru",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"delete-user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete User Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5ef842707382d711e285a599ed4dceced8a62d01cb89c31de6f4ccf54734fbfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"belajarqa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 14 Nov 2021 13:23:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Sedih melihatmu pergi halmaheraho qa\",\n    \"message\": \"Berhasil Hapus User\",\n    \"status\": \"SUCCESS_DELETE_PROFILE\"\n}"
+				}
+			]
+		}
+	]
+}
